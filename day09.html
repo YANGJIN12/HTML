@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>순박이</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes, initial-scale=1.0" />
+    <!--폰트 다운로드-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <!---->
+    <style>
+        /* navbar 디자인 */
+        #navbar {
+            background-color: white;
+            display: flex; /* 플렉스 박스로 지정 */
+            justify-content: center; /* 내용물 중앙 정렬 */
+            align-items: center; /* 세로축 기준 중앙 정렬 */
+
+            position: fixed; /* 고정 위치 */
+            width: 100%; /* 너비 */
+            height: 70px; /* 높이 */
+
+            top: 0; /* 상단에 딱 붙이기 */
+        }
+
+        #navbar > p {
+            margin: 20px;
+            font-family: 'Gamja Flower', cursive;
+        }
+
+        /* Hero 디자인 */
+        #hero {
+            padding-top: 50px; /* 요소를 50px 밀어넣기 */
+            display: flex; /* 플렉스 박스 */
+            flex-direction: column; /* 플렉스 아이템들 나열 방향 (세로) */
+            justify-content: center; /* 가로축 중앙 정렬 */
+            align-items: center; /* 세로축 중앙 정렬 */
+        }
+
+        #hero > img {
+            width: 500px; /* 너비 */
+            height: 500px; /* 높이 */
+            border-radius: 250px; /* 경계 반지름 */
+        }
+
+        #hero > p {
+            font-size: 6rem; /* 글자 크기 */
+            font-weight: 900; /* 글자 굵기 (100단위) */
+            font-family: 'Gamja Flower', cursive;
+        }
+
+
+        /* intro 디자인 */
+        #intro > p {
+            padding: 20px; /* 내용을 안으로 밀어넣기 */
+            font-size: 1.5rem; /* 글자 크기 */
+            text-align: center; /* 글자 정렬 */
+        }
+
+        /* 버튼 디자인 */
+        #contact-button {
+            display: flex;
+            justify-content: center; /* 중앙 정렬 */
+        }
+
+        #contact-button > p {
+            background-color: orange;
+            padding: 30px; /* 요소를 안으로 밀어넣기 */
+            border-radius: 50px; /* 경계 반지름 */
+            font-size: 2rem; /* 폰트 크기 */
+            font-family: 'Gamja Flower', cursive;
+        }
+
+        #contact-button > p > a {
+            text-decoration: none; /* 밑줄 없애기 */
+            color : white;
+        }
+
+        /* 가상 선택자 Pseudo Selector */
+        #contact-button > p:hover {
+            background-color: orangered;
+            cursor: pointer; /* 마우스를 클릭 모양으로 */
+        }
+
+        /* main 디자인 */ 
+        main {
+            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); /* 배경색 */
+            width: 100%; /* 너비 */
+            height: 100%; /* 높이 */
+
+            margin-top: 70px; /* navbar 높이만큼 위와 멀어지기 */
+        }
+
+        /* footer 디자인 */
+        footer {
+            text-align: center;
+        }
+
+        /* body 설정 */
+        body {
+            margin: 0;
+        }
+
+        /* 태블릿 가로, 일반 컴퓨터 모니터 */
+        /* 768 - 1200 */
+        @media screen and (max-width: 1200px) {
+
+        }
+
+        /* 모바일 가로, 태블릿 세로 */
+        /* 480 - 768 */
+        @media screen and (max-width: 768px) {
+            #navbar > p {
+                margin: 20px;
+                font-size: 1.3rem;
+            }
+
+            #hero > p {
+                font-size: 3.5rem; /* 글자 크기 */
+            }
+
+            #intro > p {
+                padding: 20px; /* 내용을 안으로 밀어넣기 */
+                font-size: 1.5rem; /* 글자 크기 */
+                text-align: center; /* 글자 정렬 */
+            }
+
+            
+        }
+
+        /* 모바일 세로 */
+        /* 0-480 */
+        @media screen and (max-width: 480px) {
+            #navbar > p {
+                margin: 20px;
+                font-size: 1.3rem;
+            }
+
+            /* 모바일 사이즈 이미지 크기 재설정 */
+            #hero > img {
+                width: 300px; /* 너비 */
+                height: 300px; /* 높이 */
+            }
+
+            #hero > p {
+                font-size: 4rem; /* 글자 크기 */
+            }
+
+            #intro > p {
+                padding: 20px; /* 내용을 안으로 밀어넣기 */
+                font-size: 1.3rem; /* 글자 크기 */
+                text-align: center; /* 글자 정렬 */
+            }
+
+            #contact-button > p {
+                background-color: orange;
+                padding: 20px; /* 요소를 안으로 밀어넣기 */
+                border-radius: 50px; /* 경계 반지름 */
+                font-size: 1.5rem; /* 폰트 크기 */
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <div id="navbar">
+            <p>홈</p>
+            <p>소개</p>
+            <p>인스타</p>
+        </div>
+    </header>
+    <main>
+        <div id="hero">
+            <img src="sunbak.png">
+            <p>순박이</p>
+        </div>
+        <div id="intro">
+            <p>저희 집 순박이를 소개합니다. 상추랑 과일이랑 밥 주는 사람을 무지 좋아하지만 밥을 안 주는 사람을 보면 되게 싫어하는 기니피그에요.</p>
+        </div>
+        <div id="contact-button">
+            <p><a href="https://www.Instagram.com">Instagram</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>2022년 8월 23일</p>
+    </footer>
+  </body>
+</html>

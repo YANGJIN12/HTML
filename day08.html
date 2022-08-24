@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>8일</title>
+        <style>
+            #navbar {
+                background-color: aquamarine;
+
+                /* position으로 스크롤 고정 */
+                position: fixed;
+
+                /* width으로 좌우 채우기 */
+                width: 100%;
+                /* 높이 지정 */
+                height: 60px;
+
+                /* top으로 위에 공백 지우기 */
+                top: 0;
+
+                /* flex 지정 */
+                display: flex;
+                /* 요소 정렬 지정 - 가로축 기준*/
+                justify-content: center;
+                /* 요소 정렬 지정 - 세로축 기준*/
+                align-items: center;
+            }
+
+            #container {
+                /* 전체 내용을 80 만큼 위와 벌린다. */
+                margin-top: 80px;
+
+                display: flex;
+                /* 브라우저 높이만큼 높이를 지정 */
+                height: 100vh;
+
+                /* 내부 안 모든 요소를 중앙으로 정렬*/
+                justify-content: center;
+
+                /* flex-direction */
+                flex-direction: row;
+
+                border-top: 2px dashed gray;
+            }
+
+            #menu {
+                /* 너비 지정 */
+                width: 200px;
+                border-right: 2px dashed gray;
+            }
+
+            #content {
+                /* 너비 지정 */
+                width: 700px;
+            }
+
+            #ads {
+                /* 너비 지정 */
+                width: 200px;
+                border-left: 2px dashed gray;
+            }
+
+            #navbar>p {
+                display: inline;
+                margin: 10px;
+            }
+
+            #player {
+                float: left;
+            }
+
+            body {
+                margin: 0;
+            }
+        </style>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+    <body>
+        <div id="navbar">
+            <p>인스타그램</p>
+            <p>트위터</p>
+            <p>페이스북</p>
+        </div>
+        <div id="container">
+            <div id="menu">
+                <ul>
+                    <li>토끼</li>
+                    <li>사자</li>
+                </ul>
+            </div>
+            <div id="content">
+                <lottie-player id="player" src="https://assets8.lottiefiles.com/packages/lf20_uJgRyM.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                국회는 상호원조 또는 안전보장에 관한 조약, 중요한 국제조직에 관한 조약, 우호통상항해조약, 주권의 제약에 관한 조약, 강화조약, 국가나 국민에게 중대한 재정적 부담을 지우는 조약 또는 입법사항에 관한 조약의 체결·비준에 대한 동의권을 가진다.
+
+국회의원과 정부는 법률안을 제출할 수 있다. 국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.
+
+일반사면을 명하려면 국회의 동의를 얻어야 한다. 선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다.
+
+국가는 국민 모두의 생산 및 생활의 기반이 되는 국토의 효율적이고 균형있는 이용·개발과 보전을 위하여 법률이 정하는 바에 의하여 그에 관한 필요한 제한과 의무를 과할 수 있다.
+            </div>
+            <div id="ads">
+                광고입니다.
+            </div>
+        </div>
+    </body>
+</html>
